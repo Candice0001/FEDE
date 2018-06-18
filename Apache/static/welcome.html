@@ -1,0 +1,10 @@
+function (err,data){
+    if(err){
+        req.end("文件不存在,404");
+    }else{
+        //根据不同的文件，设置不同的Content-Type，使用mime模块
+        req.setHeader("Content-Type",mime.getType(fileDir));
+        //找到了用户读取的文件，直接返回
+        req.end(data);
+    }
+}
