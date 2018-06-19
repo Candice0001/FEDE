@@ -9,3 +9,12 @@
 package.json :包（项目）描述文件
 6.元数据：描述自己的数据
 7.package-lock.json:是npm5以上才有的；在你第一次安装第三方包时才会生成此文件；
+
+8.response.end() & response.send()
+参数类型区别：前者参数类型更丰富，后者的参数类型只能是string,buffer
+response.send()会自动生成更多的响应报文头，所以没有乱码；
+
+9.app.get() & app.use() & app.all()
+app.get("/index",callback) :请求method为get,pathname===/index
+app.use("/index",callback):不限定请求method，路径只要包含use配置的路由即可访问 (/index,/index/aa/bb 都可访问)
+app.all("/index",callback):不限定请求method,路径需要完全匹配（===）
