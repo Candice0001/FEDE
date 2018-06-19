@@ -2,3 +2,10 @@
 异步操作，try-catch是无法捕获异常的；
 对于异步操作，要通过判断错误号（err.code）来进行出错处理
 
+2.在项目目录下使用npm install:表示本地安装，模块会被安装到项目目录下的name_modules文件夹下；
+3.全局安装,例如： npm install -g express 
+4.npm init -y 直接生成package.json 里面都是默认值； 
+5.模块可以用nodejs的require获取；包必须包含package.json文件
+package.json :包（项目）描述文件
+6.元数据：描述自己的数据
+7.package-lock.json:是npm5以上才有的；在你第一次安装第三方包时才会生成此文件；
