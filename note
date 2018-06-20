@@ -18,3 +18,27 @@ response.send()会自动生成更多的响应报文头，所以没有乱码；
 app.get("/index",callback) :请求method为get,pathname===/index
 app.use("/index",callback):不限定请求method，路径只要包含use配置的路由即可访问 (/index,/index/aa/bb 都可访问)
 app.all("/index",callback):不限定请求method,路径需要完全匹配（===）
+
+10. response.setHeader() & response.writeHeader()
+一个请求过来，系统一定会调用response.writeHeader()方法；系统通过writeheader写数据
+
+request常用方法：
+request.headers
+request.rawHeaders
+request.httpVersion
+request.methode
+request.url
+
+response常用API
+response.end():该方法会通知服务器，所有响应头，响应主题都已被发送，即服务器将其视为已完成；每次响应必须调用该方法；
+response.end():如果要响应数据的话，只能是string、buffer类型；
+response.setHeader():设置响应报文头
+response.statusCode 设置Http响应状态码
+response.statusMessage 设置Http响应状态码对应的消息
+
+
+nodejs借助express实现跨域请求：
+1) 创建一个项目，
+
+2）安装express http-pxroy
+
