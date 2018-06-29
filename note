@@ -85,4 +85,8 @@ var buf=buffer.from(string[array]) ==buffer对象
 buffer.toString("utf8")
 
 
+module.exports & exports的区别：
+module.exports和exports指向的是同一个对象，最终require返回的是module.exports指向的对象；
+
+
 
